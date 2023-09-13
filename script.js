@@ -1,3 +1,4 @@
+    body = document.querySelector("body");
     gridContainer = document.createElement("div");
     container1 = document.createElement("div");
     container2 = document.createElement("div");
@@ -22,9 +23,9 @@
     gridContainer.appendChild(container3);
     gridContainer.appendChild(container4);
     gridContainer.appendChild(container5);
-    gridContainer.appendChild(contianer6);
+    gridContainer.appendChild(container6);
     gridContainer.appendChild(container7);
-    gridContainer.appendChild(contianer8);
+    gridContainer.appendChild(container8);
     gridContainer.appendChild(container9);
     gridContainer.appendChild(container10);
     gridContainer.appendChild(container11);
