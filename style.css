@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.gridContainer {
+    width: 70%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container1, .container2, .container3, .container4,
+.container5, .container6, .container7, .container8,
+.container9, .container10, .container11, .container12,
+.container13, .container14, .container15, .container16 {
+    display: flex;
+}
+
+.div {
+    width: 25px;
+    height: 25px;
+}
