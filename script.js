@@ -1,3 +1,4 @@
+    const btn = document.createElement("button");
     const body = document.querySelector("body");
     const gridContainer = document.createElement("div");
     const container1 = document.createElement("div");
@@ -16,7 +17,8 @@
     const container14 = document.createElement("div");
     const container15 = document.createElement("div");
     const container16 = document.createElement("div");
-
+    
+    body.appendChild(btn);
     body.appendChild(gridContainer);
     gridContainer.appendChild(container1);
     gridContainer.appendChild(container2);
@@ -34,9 +36,11 @@
     gridContainer.appendChild(container14);
     gridContainer.appendChild(container15);
     gridContainer.appendChild(container16);
+    
 
    
     gridContainer.className ="gridContainer";
+    btn.className ="btn";
     container1.className ="container1";
     container2.className ="container2";
     container3.className ="container3";
@@ -54,79 +58,92 @@
     container15.className ="container15";
     container16.className ="container16";
 
-    
-let noOfBoxes = 0;
-for (let i = 0; i < 257; i++) {
-    
-    const gridBox = document.createElement("div");
-    gridBox.className = "gridBox";
-    noOfBoxes += 1;
-    
-    
+    btn.textContent = "Create a new drawing pad";  
+    btn.addEventListener('click', function () {
+        const userInput = prompt
+        ("Enter the number of squares (max 100) per side for the new grid.");
 
-    if (noOfBoxes <= 16) {
-        container1.appendChild(gridBox);
+    let noOfBoxes = 0;
+
+    for (let i = 0; i < userInput * userInput; i++) {
         
+        const gridBox = document.createElement("div");
+        gridBox.className = "gridBox";
+        gridBox.addEventListener('mouseover', function (){
+            gridBox.classList.add("black-background");
+        });
+
+        noOfBoxes += 1;     
+        
+
+        if (noOfBoxes <= userInput) {
+            container1.appendChild(gridBox);
+            
+        }
+
+        else if (noOfBoxes <= userInput * 2) {
+            container2.appendChild(gridBox);
+        }
+    
+        else if (noOfBoxes <= userInput * 3) {
+            container3.appendChild(gridBox);
+        }
+
+        else if (noOfBoxes <= userInput * 4) {
+            container4.appendChild(gridBox);
+        }
+
+        else if (noOfBoxes <= userInput * 5) {
+            container5.appendChild(gridBox);
+        }
+
+        else if (noOfBoxes <= userInput * 6) {
+            container6.appendChild(gridBox);
+        }
+
+        else if (noOfBoxes <= userInput * 7) {
+            container7.appendChild(gridBox);
+        }
+
+        else if (noOfBoxes <= userInput * 8) {
+            container8.appendChild(gridBox);
+        }
+
+        else if (noOfBoxes <=  userInput * 9) {
+            container9.appendChild(gridBox);
+        }
+
+        else if (noOfBoxes <= userInput * 10) {
+            container10.appendChild(gridBox);
+        }
+
+        else if (noOfBoxes <= userInput * 11) {
+            container11.appendChild(gridBox);
+        }
+
+        else if (noOfBoxes <= userInput * 12) {
+            container12.appendChild(gridBox);
+        }
+
+        else if (noOfBoxes <= userInput * 13) {
+            container13.appendChild(gridBox);
+        }
+
+        else if (noOfBoxes <= userInput * 14) {
+            container14.appendChild(gridBox);
+        }
+
+        else if (noOfBoxes <= userInput * 15) {
+            container15.appendChild(gridBox);
+        }
+
+        else if (noOfBoxes <= userInput * 16) {
+            container16.appendChild(gridBox);
+        }
+
     }
 
-    else if (noOfBoxes <= 32) {
-        container2.appendChild(gridBox);
-    }
-  
-    else if (noOfBoxes <= 48) {
-        container3.appendChild(gridBox);
-    }
 
-    else if (noOfBoxes <= 64) {
-        container4.appendChild(gridBox);
-    }
+    });
 
-    else if (noOfBoxes <= 80) {
-        container5.appendChild(gridBox);
-    }
-
-    else if (noOfBoxes <= 96) {
-        container6.appendChild(gridBox);
-    }
-
-    else if (noOfBoxes <= 112) {
-        container7.appendChild(gridBox);
-    }
-
-    else if (noOfBoxes <= 128) {
-        container8.appendChild(gridBox);
-    }
-
-    else if (noOfBoxes <=  144) {
-        container9.appendChild(gridBox);
-    }
-
-    else if (noOfBoxes <= 160) {
-        container10.appendChild(gridBox);
-    }
-
-    else if (noOfBoxes <= 176) {
-        container11.appendChild(gridBox);
-    }
-
-    else if (noOfBoxes <= 192) {
-        container12.appendChild(gridBox);
-    }
-
-    else if (noOfBoxes <= 208) {
-        container13.appendChild(gridBox);
-    }
-
-    else if (noOfBoxes <= 224) {
-        container14.appendChild(gridBox);
-    }
-
-    else if (noOfBoxes <= 240) {
-        container15.appendChild(gridBox);
-    }
-
-    else if (noOfBoxes <= 256) {
-        container16.appendChild(gridBox);
-    }
-
-}
+    
