@@ -1,21 +1,21 @@
-    body = document.querySelector("body");
-    gridContainer = document.createElement("div");
-    container1 = document.createElement("div");
-    container2 = document.createElement("div");
-    container3 = document.createElement("div");
-    container4 = document.createElement("div");
-    container5 = document.createElement("div");
-    container6 = document.createElement("div");
-    container7 = document.createElement("div");
-    container8 = document.createElement("div");
-    container9 = document.createElement("div");
-    container10 = document.createElement("div");
-    container11 = document.createElement("div");
-    container12 = document.createElement("div");
-    container13 = document.createElement("div");
-    container14 = document.createElement("div");
-    container15 = document.createElement("div");
-    container16 = document.createElement("div");
+    const body = document.querySelector("body");
+    const gridContainer = document.createElement("div");
+    const container1 = document.createElement("div");
+    const container2 = document.createElement("div");
+    const container3 = document.createElement("div");
+    const container4 = document.createElement("div");
+    const container5 = document.createElement("div");
+    const container6 = document.createElement("div");
+    const container7 = document.createElement("div");
+    const container8 = document.createElement("div");
+    const container9 = document.createElement("div");
+    const container10 = document.createElement("div");
+    const container11 = document.createElement("div");
+    const container12 = document.createElement("div");
+    const container13 = document.createElement("div");
+    const container14 = document.createElement("div");
+    const container15 = document.createElement("div");
+    const container16 = document.createElement("div");
 
     body.appendChild(gridContainer);
     gridContainer.appendChild(container1);
@@ -35,7 +35,7 @@
     gridContainer.appendChild(container15);
     gridContainer.appendChild(container16);
 
-
+   
     gridContainer.className ="gridContainer";
     container1.className ="container1";
     container2.className ="container2";
@@ -54,79 +54,79 @@
     container15.className ="container15";
     container16.className ="container16";
 
-for (let i = 0; i > 256; i++){
-    let noOfBoxes = 0;
-
-    div = document.createElement("div")
-    div.className = "div";
+    
+let noOfBoxes = 0;
+for (let i = 0; i < 257; i++) {
+    
+    const gridBox = document.createElement("div");
+    gridBox.className = "gridBox";
     noOfBoxes += 1;
+    
+    
 
-    if (noOfBoxes > 16) {
-        container1.append(div);
+    if (noOfBoxes <= 16) {
+        container1.appendChild(gridBox);
+        
     }
 
-    else if (noOfBoxes > 32) {
-        container2.appendChild(div);
+    else if (noOfBoxes <= 32) {
+        container2.appendChild(gridBox);
     }
   
-    else if (noOfBoxes > 48) {
-        container3.appendChild(div);
+    else if (noOfBoxes <= 48) {
+        container3.appendChild(gridBox);
     }
 
-    else if (noOfBoxes > 64) {
-        container4.appendChild(div);
+    else if (noOfBoxes <= 64) {
+        container4.appendChild(gridBox);
     }
 
-    else if (noOfBoxes > 80) {
-        container5.appendChild(div);
+    else if (noOfBoxes <= 80) {
+        container5.appendChild(gridBox);
     }
 
-    else if (noOfBoxes > 96) {
-        container6.appendChild(div);
+    else if (noOfBoxes <= 96) {
+        container6.appendChild(gridBox);
     }
 
-    else if (noOfBoxes > 112) {
-        container7.appendChild(div);
+    else if (noOfBoxes <= 112) {
+        container7.appendChild(gridBox);
     }
 
-    else if (noOfBoxes > 128) {
-        container8.appendChild(div);
+    else if (noOfBoxes <= 128) {
+        container8.appendChild(gridBox);
     }
 
-    else if (noOfBoxes >  144) {
-        container9.appendChild(div);
+    else if (noOfBoxes <=  144) {
+        container9.appendChild(gridBox);
     }
 
-    else if (noOfBoxes > 160) {
-        container10.appendChild(div);
+    else if (noOfBoxes <= 160) {
+        container10.appendChild(gridBox);
     }
 
-    else if (noOfBoxes > 176) {
-        container11.appendChild(div);
+    else if (noOfBoxes <= 176) {
+        container11.appendChild(gridBox);
     }
 
-    else if (noOfBoxes > 192) {
-        container12.appendChild(div);
+    else if (noOfBoxes <= 192) {
+        container12.appendChild(gridBox);
     }
 
-    else if (noOfBoxes > 208) {
-        container13.appendChild(div);
+    else if (noOfBoxes <= 208) {
+        container13.appendChild(gridBox);
     }
 
-    else if (noOfBoxes > 224) {
-        container14.appendChild(div);
+    else if (noOfBoxes <= 224) {
+        container14.appendChild(gridBox);
     }
 
-    else if (noOfBoxes > 240) {
-        container15.appendChild(div);
+    else if (noOfBoxes <= 240) {
+        container15.appendChild(gridBox);
     }
 
-    else if (noOfBoxes > 256) {
-        container16.appendChild(div);
+    else if (noOfBoxes <= 256) {
+        container16.appendChild(gridBox);
     }
 
 }
-
-
-
-
