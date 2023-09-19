@@ -6,9 +6,8 @@
 }
 
 body {
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
     justify-content: space-around;
@@ -18,29 +17,28 @@ body {
 .gridContainer {
     /* width: 256px;
     height: 257px;  */
-    display: inline-block;
+    display: flex;
     flex-direction: column;
     background-color: aqua;
-    border-width: 2px;
+    border-width: 0.1px;
     border-color: black;
-    border-style: solid;    
+    border-style: solid;
+    
+
 }
 
 .containers {
     display: flex;
-    border-width: 1px;
+    border-width: 0.1px;
     border-color: black;
     border-style: solid;
-    height: 16px;
-    width: 256; 
-
-    
+    height: 8px;    
 }
 
 .gridBoxes {
-    width: 16px;
-    height: 16px;
-    border-width: 2px;
+    width: 8px;
+    height: 8px;
+    border-width: 0.1;
     border-color: black;
     border-style: solid;
 }
@@ -51,7 +49,7 @@ body {
 }
 
 .btn {
-    width: 50px;
+    width: 100px;
     height: 50px;
     border-radius: 10%;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
@@ -59,6 +57,3 @@ body {
 
 }
 
-.visible {
-    visibility: visible;
-}
