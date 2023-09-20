@@ -1,15 +1,24 @@
     const btn = document.createElement("button");
+    const magicalBtn = document.createElement("button");
+    const gridBoxes = document.querySelectorAll('.gridBoxes')
     const body = document.querySelector("body");
+    const btnContainer = document.createElement("div");
     const gridContainer = document.createElement("div");
     const container = [];
     const gridBox = [];
     let firstClick = true;
 
-    body.appendChild(btn);
+    body.appendChild(btnContainer);
     body.appendChild(gridContainer);
+    btnContainer.appendChild(btn);
+    btnContainer.appendChild(magicalBtn);
+    
+
 
     btn.className ="btn";
     gridContainer.className ="gridContainer";
+    magicalBtn.className = "magicalBtn";
+    btnContainer.className = "btnContainer";
 
 
     
@@ -39,14 +48,38 @@
                             gridBox[j].className ="gridBoxes"; 
                             container[i].appendChild(gridBox[j]);
                             addMouseoverListener(gridBox[j]);
+                            changeToMagicalColor(gridBox[j])
                             }
                         }
 
                     function addMouseoverListener(box) {
                         box.addEventListener('mouseover', function (){
-                        box.classList.add("black-background")
+                        box.classList.add("black-background");
+                            })
+                        }   
+
+                    function randomColorGenerator () {
+                        const randomR = Math.floor(Math.random() * 256);
+                        const randomG = Math.floor(Math.random() * 256);
+                        const randomB = Math.floor(Math.random() * 256);
+                
+                        const randomColor = `rgb(${randomR},${randomG},${randomB})`;
+                
+                        return randomColor;
+                        }
+
+
+
+                    function  changeToMagicalColor (item) {
+                        magicalBtn.addEventListener('click', function () {
+                            item.addEventListener('mouseover', function() {
+                            item.style.backgroundColor = randomColorGenerator();
+                                })
                             })
                         }
+     
+
+                        
                     } 
             
                 firstClick = false;   
@@ -58,8 +91,11 @@
                 }
             
             });
-    
 
+
+
+    
    
+    magicalBtn.textContent = "Magical color";  
 
     
