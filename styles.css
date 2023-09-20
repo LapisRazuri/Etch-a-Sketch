@@ -6,17 +6,18 @@
 }
 
 body {
-    /* height: 100vh; */
+    height: 100vh;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: space-around;
+    
 }
 
 
 .gridContainer {
-    /* width: 256px;
-    height: 257px;  */
+    width: 500px;
+    height: 500px; 
     display: flex;
     flex-direction: column;
     background-color: aqua;
@@ -24,23 +25,29 @@ body {
     border-color: black;
     border-style: solid;
     
+    
+    
 
 }
 
 .containers {
     display: flex;
+    justify-content: space-between;
     border-width: 0.1px;
     border-color: black;
     border-style: solid;
-    height: 8px;    
+    flex-grow: 1;
+       
 }
 
 .gridBoxes {
-    width: 8px;
-    height: 8px;
+    /* width: 8px; */
+    /* height: 8px; */
     border-width: 0.1;
     border-color: black;
     border-style: solid;
+    flex: 1 1 auto;
+    /* flex-grow: 1; */
 }
 
 .black-background {
