@@ -36,15 +36,17 @@
                 
                         for (let j = 0; j < userInput; j++) {
                             gridBox[j] = document.createElement("div");
-
-                            gridBox[j].addEventListener('mouseover', function (){
-                            gridBox[j].classList.add("black-background"); 
-                            });
-                            
                             gridBox[j].className ="gridBoxes"; 
                             container[i].appendChild(gridBox[j]);
+                            addMouseoverListener(gridBox[j]);
                             }
-                        } 
+                        }
+
+                    function addMouseoverListener(box) {
+                        box.addEventListener('mouseover', function (){
+                        box.classList.add("black-background")
+                            })
+                        }
                     } 
             
                 firstClick = false;   
