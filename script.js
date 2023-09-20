@@ -47,18 +47,23 @@
                 }
 
             else {
+                gridContainer.style.visibility = "visible";
+
                 for (let i = 0; i < userInput; i++) {
                     container[i] = document.createElement("div");
                     gridContainer.appendChild(container[i]);
                     container[i].className ="containers";
+                    container[i].style.visibility = "visible";
             
                     for (let j = 0; j < userInput; j++) {
                         gridBox[j] = document.createElement("div");
                         gridBox[j].className ="gridBoxes"; 
+                        gridBox[j].style.visibility = "visible";
                         container[i].appendChild(gridBox[j]);
                         addMouseoverListener(gridBox[j]);
                         changeToMagicalColor(gridBox[j]);
                         clearGrid(gridBox[j]);
+                        
                         }
                     }
 
