@@ -8,6 +8,8 @@
     const container = [];
     const gridBox = [];
     let firstClick = true;
+    let isDrawing = false;
+    let magicalBtnFirstClick = true;
 
     body.appendChild(btnContainer);
     body.appendChild(gridContainer);
@@ -66,13 +68,7 @@
                         
                         }
                     }
-
-                function addMouseoverListener(box) {
-                    box.addEventListener('mouseover', function (){
-                    box.classList.add("black-background");
-                        })
-                    }   
-
+            
                 function randomColorGenerator () {
                     const randomR = Math.floor(Math.random() * 106) + 150;
                     const randomG = Math.floor(Math.random() * 106) + 150;
@@ -81,48 +77,58 @@
                     const randomColor = `rgb(${randomR},${randomG},${randomB})`;
             
                     return randomColor;
-                    }
-
-
-
+                    };
+                        
+                        
                 function changeToMagicalColor (item) {
+                    
                     magicalBtn.addEventListener('click', function () {
-                        item.addEventListener('mouseover', function() {
-                        item.style.backgroundColor = randomColorGenerator();
-                            })
+                        if (magicalBtnFirstClick == true) {
+                            item.addEventListener('mouseover', function() {
+                                item.style.backgroundColor = randomColorGenerator();
+                                magicalBtnFirstClick = false;
+                                    })
+                            }
+
+                        else if (magicalBtnFirstClick == false) {
+                            item.addEventListener('mouseover', function() {
+                                item.style.backgroundColor = "black";
+                                magicalBtnFirstClick = true;
+                                    })
+                               }
                         })
                     }
+        
 
+                function addMouseoverListener(box) {
+                    box.addEventListener('mouseover', function (){
+                    box.classList.add("black-background");
+                        })
+                    }   
 
                 function clearGrid (eachbox) {
                     clearGridBtn.addEventListener('click', function () {
                         eachbox.style.backgroundColor = "aqua"; 
                         })
                     }
-                
-            
-
-
                 } 
-        
 
-
-
-            firstClick = false;   
+            firstClick = false;
+              
             } 
 
         else {
             gridContainer.innerHTML = '';
-            firstClick = true; 
+            firstClick = true;
             }
         
         });
 
-
        
+                    
+       
+
+        
         
 
-
-
-
-  
+        
