@@ -6,7 +6,6 @@
     const btnContainer = document.createElement("div");
     const gridContainer = document.createElement("div");
     const container = [];
-    const gridBox = [];
     let firstClick = true;
     let isDrawing = false;
     let magicalBtnFirstClick = true;
@@ -58,16 +57,54 @@
                     container[i].style.visibility = "visible";
             
                     for (let j = 0; j < userInput; j++) {
-                        gridBox[j] = document.createElement("div");
-                        gridBox[j].className ="gridBoxes"; 
-                        gridBox[j].style.visibility = "visible";
-                        container[i].appendChild(gridBox[j]);
-                        addMouseoverListener(gridBox[j]);
-                        changeToMagicalColor(gridBox[j]);
-                        clearGrid(gridBox[j]);
+                        let gridBox = document.createElement("div");
+                        gridBox.className ="gridBoxes"; 
+                        gridBox.style.visibility = "visible";
+                        container[i].appendChild(gridBox);
+                        draw(gridBox);
+                        clearGrid(gridBox);
+                        
                         
                         }
                     }
+
+                  
+
+                magicalBtn.addEventListener('click', function () {
+                    if (magicalBtnFirstClick == false) {
+                        magicalBtnFirstClick = true
+                        }
+
+                    else if (magicalBtnFirstClick == true) {
+                        magicalBtnFirstClick = false
+                        }
+                        });
+
+
+                    
+
+                function draw(box) {
+                    gridContainer.addEventListener('mousedown', () => {
+                        isDrawing = true;
+                        box.addEventListener('mouseover', function (){
+                            if (isDrawing == true) {
+                                box.classList.add("black-background");
+                                if (magicalBtnFirstClick == false) {
+                                    box.style.backgroundColor = randomColorGenerator();
+                                    }
+                    
+                                }
+                                
+                                    
+                                })
+                            });
+        
+                document.addEventListener('mouseup', () => {
+                    isDrawing = false;
+                    });
+                }
+
+        
             
                 function randomColorGenerator () {
                     const randomR = Math.floor(Math.random() * 106) + 150;
@@ -78,40 +115,22 @@
             
                     return randomColor;
                     };
-                        
-                        
-                function changeToMagicalColor (item) {
-                    
-                    magicalBtn.addEventListener('click', function () {
-                        if (magicalBtnFirstClick == true) {
-                            item.addEventListener('mouseover', function() {
-                                item.style.backgroundColor = randomColorGenerator();
-                                magicalBtnFirstClick = false;
-                                    })
-                            }
+              
 
-                        else if (magicalBtnFirstClick == false) {
-                            item.addEventListener('mouseover', function() {
-                                item.style.backgroundColor = "black";
-                                magicalBtnFirstClick = true;
-                                    })
-                               }
-                        })
-                    }
+                
         
-
-                function addMouseoverListener(box) {
-                    box.addEventListener('mouseover', function (){
-                    box.classList.add("black-background");
-                        })
-                    }   
+                
+                
+                
+                 
 
                 function clearGrid (eachbox) {
                     clearGridBtn.addEventListener('click', function () {
                         eachbox.style.backgroundColor = "aqua"; 
-                        })
-                    }
-                } 
+                            })
+                        }
+                    } 
+
 
             firstClick = false;
               
