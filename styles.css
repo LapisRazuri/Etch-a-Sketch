@@ -50,10 +50,6 @@ body {
     visibility:hidden;
 }
 
-.black-background {
-    background-color: black;
-
-}
 
 .btnContainer {
     display: flex;
